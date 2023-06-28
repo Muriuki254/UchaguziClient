@@ -1,0 +1,60 @@
+.admin-home {
+  display: flex;
+  gap: 3rem;
+}
+
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.admin-container-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.create-input{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.create-input input {
+ 
+  margin-right: 0.5rem;
+}
+
+.admin-container-list p{
+  list-style-type: none;
+  padding: 0;
+}
+
+.admin-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.save-button,
+.cancel-button {
+  background-color: #2196F3;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.create-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+  
+  

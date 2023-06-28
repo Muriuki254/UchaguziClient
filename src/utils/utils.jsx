@@ -1,0 +1,1 @@
+export const apiDomain = 'https://uchaguziapi.azurewebsites.net';
