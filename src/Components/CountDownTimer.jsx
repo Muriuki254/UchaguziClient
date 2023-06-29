@@ -51,28 +51,27 @@ function CountDownTimer() {
   const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
   return (
-    <div className="container">
-      <div>
-        <h2 className="state">Countdown Timer</h2>
+    <div className="countdown-container">
+      <div className='countdown-box'>
+        <h2 className="state">Time Remaining</h2>
         {election && (
           <div className="content">
-            <h3 className="state">Time Remaining:</h3>
             <div className="count-down">
               <div className="count-down-box">
-                <h3 id="day">{formatTime(days)}</h3>
-                <span>days</span>
+                <h3>{formatTime(days)}</h3>
+                <span>DAYS</span>
               </div>
               <div className="count-down-box">
-                <h3 id="hour">{formatTime(hours)}</h3>
-                <span>hours</span>
+                <h3>{formatTime(hours)}</h3>
+                <span>HOURS</span>
               </div>
               <div className="count-down-box">
-                <h3 id="minute">{formatTime(minutes)}</h3>
-                <span>minutes</span>
+                <h3>{formatTime(minutes)}</h3>
+                <span>MINUTES</span>
               </div>
               <div className="count-down-box">
-                <h3 id="second">{formatTime(seconds)}</h3>
-                <span>seconds</span>
+                <h3>{formatTime(seconds)}</h3>
+                <span>SECONDS</span>
               </div>
             </div>
           </div>

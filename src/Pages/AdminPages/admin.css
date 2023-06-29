@@ -39,6 +39,10 @@
   margin-bottom: 0.8rem;
 }
 
+.admin-list-label{
+  color:hsl(39, 100%, 56%);
+}
+
 .save-button,
 .cancel-button {
   background-color: #2196F3;

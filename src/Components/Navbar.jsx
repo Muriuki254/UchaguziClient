@@ -1,6 +1,7 @@
-import { Link ,useNavigate} from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './style.css';
-import { FcContacts, FcServices, FcHome } from 'react-icons/fc';
+import { FcContacts, FcServices, FcHome, FcMenu} from 'react-icons/fc';
 import { FiLogIn, FiUserPlus, FiLogOut } from 'react-icons/fi';
 import { useContext } from 'react';
 import { Context } from '../context/userContext/Context';
@@ -8,6 +9,7 @@ import { Context } from '../context/userContext/Context';
 function Navbar() {
   const { user, dispatch } = useContext(Context);
   const navigate = useNavigate();
+  const [showLinks, setShowLinks] = useState(false);
 
   const handleLogout = () => {
     // Perform logout logic
@@ -17,17 +19,20 @@ function Navbar() {
 
   return (
     <div className="navbar">
-      <h2 className="navbar-logo">SmartBallot</h2>
-      <div className="navbar-links">
+      <h2 className="navbar-logo">UCHAGUZI</h2>
+      <i className="navbar-toggle" onClick={() => setShowLinks(!showLinks)}>
+        {showLinks ? <FcMenu />: <FcMenu />} 
+      </i>
+      <div className={`navbar-links ${showLinks ? " " : "hidden"}`}>
         <Link to="/" className="navbar-link">
           <FcHome />
           <span>Home</span>
         </Link>
-        <Link to="/services" className="navbar-link">
+        <Link to="/" className="navbar-link">
           <FcServices />
           <span>Services</span>
         </Link>
-        <Link to="/contact" className="navbar-link">
+        <Link to="/" className="navbar-link">
           <FcContacts />
           <span>Contact</span>
         </Link>
@@ -56,5 +61,3 @@ function Navbar() {
 }
 
 export default Navbar;
-
-

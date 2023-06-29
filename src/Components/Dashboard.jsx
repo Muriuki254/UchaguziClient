@@ -16,8 +16,8 @@ function Dashboard() {
   return (
     <div>
       <div className="dashboard-container">
-        <ElectionDetails />
         <CountDownTimer />
+        <ElectionDetails />
       </div>
     </div>
   )

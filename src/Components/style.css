@@ -1,80 +1,142 @@
-
 .navbar {
-    display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+  padding: 10px 15px;
+  background-color: hsl(216, 53%, 9%);
+  color: hsl(252, 100%, 67%);
+}
+
+.navbar-logo {
+  font-size: 2rem;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: hsl(166, 100%, 37%);
+  font-size: 16px;
+  margin-right: 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: hsl(0, 100%, 67%);
+}
+
+.navbar-link svg {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.navbar-link span {
+  margin-left: 3px;
+}
+.navbar-links.showing{
+  display:none;
+}
+
+.navbar-toggle {
+  background: none;
+  border: none;
+  font-size: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    margin-left: 10px;
-    border-bottom: 1px solid hsl(176, 68%, 64%);
-    padding: 10px 15px;
-    background-color: hsl(216, 53%, 9%);
-    color:hsl(252, 100%, 67%);
+    padding: 10px;
   }
-  
-  .navbar-logo {
-    font-size: 24px;
-  }
-  
+
   .navbar-links {
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
   }
   
-  .navbar-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: hsl(166, 100%, 37%);
-    font-size: 16px;
-    margin-right: 20px;
-    transition: color 0.3s ease;
+  .navbar-links.hidden {
+    display: none;
+  }
+  .navbar-toggle {
+    background: none;
+    border: none;
+    font-size: 4rem;
   }
   
-  .navbar-link:hover {
-    color: hsl(0, 100%, 67%);
-  }
-  
-  .navbar-link svg {
-    margin-right: 5px;
-    font-size: 20px;
-  }
-  
-  .navbar-link span {
-    margin-left: 3px;
-  }
-  
+}
+
+
   
 .footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    border-top: 1px solid hsl(176, 68%, 64%);
     padding: 10px 5px;
-    background-color: hsl(216, 53%, 9%);
+    background-image: url("../assets/pattern-hills.svg");
     color: hsl(198, 60%, 50%);
-    /* width: 100%; */
 }
 
 .dashboard-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    /* border: 1px solid black; */
+    background-image: url("../assets/bg-stars.svg");
     padding: 10px;
     height: 100vh;
-    /* width: 100%; */
+}
+
+.countdown-container {
+  align-items: center; 
+  padding: 5px;
+} 
+
+.state {
+  color: hsl(252, 100%, 67%);
+  font-weight: bold;
+  margin-left: 6.5rem;
+  font-size: 2rem;
 }
 .count-down {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    /* border: 1px solid black; */
     padding: 10px;
-    /* width: 100%; */
 }
+.count-down-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px; */
+    margin-left: 1rem;
 
+}
+.count-down-box h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    border: 1px solid hsl(176, 68%, 64%);
+    border-radius: 5px;
+    background-color: hsl(236, 21%, 26%);
+    color: hsl(345, 95%, 68%);
+    width: 100px;
+    height: 95px;
+}
+.count-down-box span {
+    font-size: 1rem;
+    color: hsl(198, 60%, 50%);
+}
 .registration-form {
   display: flex;
   flex-direction: column;
@@ -83,7 +145,6 @@
   padding: 20px;
   border: 1px solid hsl(176, 68%, 64%);
   border-radius: 5px;
-  background-color: hsl(217, 28%, 15%);
 }
 .registration-form-header {
   display: flex;
@@ -138,24 +199,7 @@
   margin-left: -25px;
 }
 
-  /* .toast-container {
-    width: 320px;
-    margin-top: 20px;
-  }
-  
-  .toast-success {
-    background-color: #4caf50;
-  }
-  
-  .toast-error {
-    background-color: #f44336;
-  }
-  
-  .toast-message {
-    color: #fff;
-    font-size: 14px;
-    padding: 10px;
-  } */
+
 
   
   .login-form {
@@ -166,7 +210,6 @@
     padding: 20px;
     border: 1px solid hsl(176, 68%, 64%);
     border-radius: 5px;
-    background-color: hsl(217, 28%, 15%);
   }
   .login-form-header {
     display: flex;

@@ -101,7 +101,7 @@ function Positions() {
   };
 
   return (
-    <div className='admin-container'>
+    <div className='admin-container' >
       <div className='admin-container-header'>
         <div className='create-input'>
           <h3>Create Position</h3>
@@ -114,7 +114,7 @@ function Positions() {
             onChange={handleInputChange}
             placeholder="Position Name"
           />
-          <button onClick={createPosition}>Create</button>
+          <button className="create-button" onClick={createPosition}>Create</button>
           </div>
         </div>
       </div>
