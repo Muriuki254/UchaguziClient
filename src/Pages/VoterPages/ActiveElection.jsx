@@ -4,6 +4,7 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import { apiDomain } from '../../utils/utils';
 import { Context } from '../../context/userContext/Context';
+import './voter.css'
 
 const ActiveElection = () => {
   const { user } = useContext(Context);
@@ -30,13 +31,15 @@ const ActiveElection = () => {
   };
 
   return (
-    <div>
+    <div style={{ marginLeft: '3rem' }}>
       <h2>Active Elections</h2>
       {activeElections.length > 0 ? (
-        <ul>
+        <ul style={{ listStyleType: 'none' }}>
           {activeElections.map((election) => (
             <li key={election.ElectionID}>
-              Title: {election.Title}, Start Date: {election.StartDate}, End Date: {election.EndDate}
+              <p>Title: <span style={{ fontWeight: 'bold', color:"hsl(71, 68%, 64%)" }}>{election.Title}</span></p>
+              <p>Start Date: <span style={{ fontWeight: 'bold', color:"hsl(71, 68%, 64%)" }}>{election.StartDate}</span></p>
+              <p>End Date: <span style={{ fontWeight: 'bold', color:"hsl(71, 68%, 64%)" }}>{election.EndDate}</span></p>
             </li>
           ))}
         </ul>

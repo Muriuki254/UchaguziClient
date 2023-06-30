@@ -3,6 +3,7 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import { apiDomain } from '../../utils/utils';
 import { Context } from '../../context/userContext/Context';
+import AdminStats from '../../charts/AdminStats';
 
 const ElectionStatistics = () => {
   const { user } = useContext(Context);
@@ -31,12 +32,16 @@ const ElectionStatistics = () => {
   return (
     <div>
       <h2>Election Statistics</h2>
-      <ul>
-        <li>Candidate Count: {statistics.candidateCount}</li>
-        <li>Voter Count: {statistics.voterCount}</li>
-        <li>Position Count: {statistics.positionCount}</li>
-        <li>Election Count: {statistics.electionCount}</li>
-      </ul>
+      <div style={{display: 'flex', flexDirection: 'row'}}>
+        <AdminStats />
+        <ul>
+          <p>COUNTS</p>
+          <li>Candidates: {statistics.candidateCount}</li>
+          <li>Voters   :  {statistics.voterCount}</li>
+          <li>Positions: {statistics.positionCount}</li>
+          <li>Elections: {statistics.electionCount}</li>
+        </ul>        
+      </div>
       <ToastContainer />
     </div>
   );

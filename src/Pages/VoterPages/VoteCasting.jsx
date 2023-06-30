@@ -84,22 +84,22 @@ function VoteCasting() {
 
   return (
     <div className="vote-casting-container">
-      <h3>Vote Casting</h3>
+      <h3>Best Kenyan President</h3>
       {positions.map((position) => (
         <div key={position.PositionID}>
           <h3>{position.PositionName}</h3>
-          <div>
+          <div style={{ display: 'flex', flexDirection: 'row',gap:'10px'}}>
             {positionCandidates[position.PositionName]?.map((candidate) => (
               <div className="candidate-card" key={candidate.CandidateID}>
                 <input
-                  type="radio"
+                  type="checkbox"
                   name={position.PositionName}
                   value={candidate.CandidateID}
                   checked={selectedCandidates[position.PositionName] === candidate.CandidateID}
                   onChange={(e) => handleCandidateChange(e, position.PositionName)}
                 />
                 <div className="candidate-details">
-                  <label>Name</label>
+                  <label>President Name</label>
                   <p>{`${candidate.FirstName} ${candidate.SecondName}`}</p>
                 </div>
                 <div className="candidate-details">
@@ -112,7 +112,7 @@ function VoteCasting() {
         </div>
       ))}
   
-      <button onClick={castVote} disabled={Object.keys(selectedCandidates).length !== positions.length}>
+      <button style={{ marginTop: '25px' }} onClick={castVote} disabled={Object.keys(selectedCandidates).length !== positions.length}>
         Cast Vote
       </button>
   

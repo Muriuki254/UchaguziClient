@@ -3,6 +3,7 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import { apiDomain } from '../../utils/utils';
 import { Context } from '../../context/userContext/Context';
+import "./voter.css"
 
 const VotingHistory = () => {
   const { user } = useContext(Context);
