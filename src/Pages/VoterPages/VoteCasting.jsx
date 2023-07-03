@@ -12,7 +12,7 @@ function VoteCasting() {
 
   useEffect(() => {
     fetchPositions();
-  });
+  },[]);
 
   const fetchPositions = async () => {
     try {
