@@ -86,6 +86,11 @@ const Login = () => {
         {errors.Password && <span>{errors.Password.message}</span>}
 
         <button type="submit">Login</button>
+        <div>
+          <p style={{color:'hsl(0, 0%, 49%)'}}>Admin Login Credentials</p>
+          <p>Email:admin@gmail.com</p>
+          <p>Password:admin123</p>
+        </div>
       </form>
       <ToastContainer />
     </div>
